@@ -14,6 +14,7 @@ function App() {
           confirmed: data.confirmed,
           recovered: data.recovered,
           deaths: data.deaths,
+          lastUpdate: data.lastUpdate,
         };
         console.log(mData);
         setCovidData(mData);
@@ -24,7 +25,6 @@ function App() {
 
   return (
     <div className={styles.container}>
-      <h1>Hello World</h1>
       <Cards covidData={covidData} />
       <Chart />
       <CountryPicker />
